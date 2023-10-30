@@ -29,3 +29,25 @@ local NinjaRun = "http://www.roblox.com/asset/?id=10921157929"
 local NinjaWalk = "http://www.roblox.com/asset/?id=10921162768"
 local NinjaJump = "http://www.roblox.com/asset/?id=10921160088"
 local NinjaFall = "http://www.roblox.com/asset/?id=10921159222"
+
+local userInputService = game:GetService("UserInputService")
+
+userInputService.InputBegan:Connect(function(input, gameProcessedEvent)
+
+	print("Script made by Alex.")
+
+	if input.UserInputType == Enum.UserInputType.Keyboard then
+
+		if input.KeyCode == Enum.KeyCode.W then
+			local Animate = game.Players.LocalPlayer.Character.Animate
+			Animate.walk.WalkAnim.AnimationId = ZombieWalk
+			Animate.run.RunAnim.AnimationId = ZombieRun
+			Animate.jump.JumpAnim.AnimationId = NinjaJump
+			Animate.fall.FallAnim.AnimationId = NinjaFall
+			game.Players.LocalPlayer.Character.Humanoid.Jump = false
+			wait(0.2)	
+			Animate.idle.Animation1.AnimationId = ElderIdle1
+			Animate.idle.Animation2.AnimationId = ElderIdle2
+		end
+	end
+end)
