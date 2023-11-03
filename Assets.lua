@@ -46,8 +46,8 @@ userInputService.InputBegan:Connect(function(input, gameProcessedEvent)
 			Animate.fall.FallAnim.AnimationId = NinjaFall
 			game.Players.LocalPlayer.Character.Humanoid.Jump = false
 			wait(0.2)	
-			Animate.idle.Animation1.AnimationId = ElderIdle1
-			Animate.idle.Animation2.AnimationId = ElderIdle2
+			Animate.idle.Animation1.AnimationId = ToyIdle1
+			Animate.idle.Animation2.AnimationId = ToyIdle2
 		end
 	end
 end)
