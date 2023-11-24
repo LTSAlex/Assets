@@ -54,6 +54,14 @@ local VampireWalk = "http://www.roblox.com/asset/?id=10921326949"
 local VampireJump = "http://www.roblox.com/asset/?id=10921322186"
 local VampireFall = "http://www.roblox.com/asset/?id=10921321317"
 
+--Astronaut Assets--
+local AstronautIdle1 = "http://www.roblox.com/asset/?id=10921034824"
+local AstronautIdle2 = "http://www.roblox.com/asset/?id=10921036806"
+local AstronautRun = "http://www.roblox.com/asset/?id=10921039308"
+local AstronautWalk = "http://www.roblox.com/asset/?id=10921046031"
+local AstronautJump = "http://www.roblox.com/asset/?id=10921042494"
+local AstronautFall = "http://www.roblox.com/asset/?id=10921040576"
+
 local userInputService = game:GetService("UserInputService")
 
 userInputService.InputBegan:Connect(function(input, gameProcessedEvent)
@@ -70,8 +78,8 @@ userInputService.InputBegan:Connect(function(input, gameProcessedEvent)
 			Animate.fall.FallAnim.AnimationId = NinjaFall
 			game.Players.LocalPlayer.Character.Humanoid.Jump = false
 			wait(0.2)	
-			Animate.idle.Animation1.AnimationId = VampireIdle1
-			Animate.idle.Animation2.AnimationId = VampireIdle2
+			Animate.idle.Animation1.AnimationId = AstronautIdle1
+			Animate.idle.Animation2.AnimationId = AstronautIdle2
 		end
 	end
 end)
